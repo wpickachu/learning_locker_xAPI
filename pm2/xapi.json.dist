@@ -1,0 +1,18 @@
+{
+  "apps": [
+    {
+      "name": "xAPI",
+      "script": "./dist/server.js",
+      "cwd": "{INSTALL_DIR}",
+      "output": "{LOG_DIR}/xapi_stdout.log",
+      "error": "{LOG_DIR}/xapi_stderr.log",
+      "pid": "{PID_DIR}/xapi.pid",
+      "instances": 2,
+      "exec_mode": "cluster",
+      "wait_ready": true,
+      "listen_timeout": 30000,
+      "watch": [".env"],
+      "max_memory_restart" : "500M"
+    }
+  ]
+}
